@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "vazir";
+  src: url("font/vazir.eot");
+  src: url("font/vazir.eot?#iefix") format("embedded-opentype");
+  src: url("font/Vazir.woff2") format("woff2"),
+    url("font/Vazir.woff") format("woff"),
+    url("font/Vazir.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #b6d3ff; */
+  /* background: rgb(244,210,131);
+background: linear-gradient(54deg, rgba(244,210,131,1) 0%, rgba(231,170,62,1) 50%, rgba(231,136,35,1) 100%); */
+  font-family: "vazir";
+  background: rgb(98, 81, 221);
+  background: linear-gradient(
+    54deg,
+    rgba(98, 81, 221, 1) 0%,
+    rgba(98, 81, 221, 1) 73%,
+    rgba(208, 123, 232, 1) 93%
+  );
+}
+.container {
+  max-width: 1280px;
+}
+.login__form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 80vh;
+}
+.login__form__img img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+.login__form__right {
+  padding: 2rem;
+}
+.login__form__right h1 {
+  margin-bottom: 2rem;
+}
+.login__form__right form input,
+.login__form__right form button {
+  width: 100%;
+  margin-bottom: 1rem;
+  border: 2px solid #cdd9ea;
+  padding: 0.6rem;
+  border-radius: 5px;
+  outline: none;
+}
+.login__form__right form input:focus {
+  border: 2px solid rgb(81, 62, 220);
+  box-shadow: 0 0 0px 2px rgba(208, 123, 232, 1);
+}
+.login__form__right form label {
+  color: #989b9f;
+  font-size: 0.8rem;
+}
+.login__form__right form button {
+  background: rgb(98, 81, 221);
+  background: linear-gradient(
+    54deg,
+    rgba(98, 81, 221, 1) 0%,
+    rgba(98, 81, 221, 1) 73%,
+    rgba(208, 123, 232, 1) 93%
+  );
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.7rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+@media screen and (min-width: 768px) {
+  .login__form {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .login__form__right {
+    padding: 5rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .login__form__img {
+    width: 50%;
+  }
+  .login__form__img img {
+    height: 98vh;
+    width: 100%;
+    display: block;
+  }
+}
+.hidde {
+  visibility: hidden;
+}
+.username-validation,
+.password-validation {
+  /* color: red; */
+  display: none;
+  font-size: 15px;
+}
+.login__form__right form .singin  button{
+  background: rgb(233, 227, 227);
+  background: linear-gradient(
+    54deg,
+    rgba(233, 227, 227, 1) 0%,
+    rgba(244, 243, 251, 1) 73%,
+    rgba(208, 123, 232, 1) 93%
+  );
+  border: none;
+  color: #0a0808;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.7rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
