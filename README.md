@@ -1,0 +1,6 @@
+![Screenshot (220)](https://github.com/Negisa-kh/book-store/assets/139978798/31d324f3-6a18-4335-8b06-0aaa3b9fc18d)
+![Screenshot (221)](https://github.com/Negisa-kh/book-store/assets/139978798/c138e84e-078e-47b5-975a-4120cbe1b80c)
+![Screenshot (222)](https://github.com/Negisa-kh/book-store/assets/139978798/da1452c2-c6a6-4226-a2b0-93ba7e9fdfb9)
+![Screenshot (223)](https://github.com/Negisa-kh/book-store/assets/139978798/6af6ae75-f386-4d66-a3c2-354abc1d2786)
+![Screenshot (224)](https://github.com/Negisa-kh/book-store/assets/139978798/836e35f4-6e61-4ba9-9fa8-d2dc5deb985c)
+![Screenshot (225)](https://github.com/Negisa-kh/book-store/assets/139978798/79c378e4-7b6c-4429-bc71-ea48fe1e518c)
