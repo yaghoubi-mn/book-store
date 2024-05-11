@@ -72,11 +72,19 @@ WSGI_APPLICATION = 'book_store.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+import os
+with open(".env", 'r') as f:
+    envs = f.read().split("\n")
+envs = {x.split("=")[0]:x.split("=")[1] for x in envs}
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': envs["NAME"],
+        'USER': envs["USER"],
+        'PASSWORD': envs["PASSWORD"],
+        'HOST': envs["HOST"],
+        'PORT': envs["PORT"]
     }
 }
 
@@ -115,7 +123,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '../../frontend/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
