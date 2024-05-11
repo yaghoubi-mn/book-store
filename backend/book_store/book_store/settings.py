@@ -73,18 +73,22 @@ WSGI_APPLICATION = 'book_store.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 import os
-with open(".env", 'r') as f:
-    envs = f.read().split("\n")
-envs = {x.split("=")[0]:x.split("=")[1] for x in envs}
+with open(Path(__file__).parent.parent / ".env", 'r') as f:
+    envs1 = f.read().split("\n")
+envs = {}
+for e in envs1:
+    if e != "":
+        e = e.split("=")
+        envs[e[0]] = e[1]
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': envs["NAME"],
-        'USER': envs["USER"],
-        'PASSWORD': envs["PASSWORD"],
-        'HOST': envs["HOST"],
-        'PORT': envs["PORT"]
+        'NAME': envs["DB_NAME"],
+        'USER': envs["DB_USERNAME"],
+        'PASSWORD': envs["DB_PASSWORD"],
+        'HOST': envs["DB_HOST"],
+        'PORT': envs["DB_PORT"]
     }
 }
 
@@ -123,7 +127,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '../../frontend/static/'
+STATIC_URL = Path(__file__).resolve().parent.parent.parent / 'frontend/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
